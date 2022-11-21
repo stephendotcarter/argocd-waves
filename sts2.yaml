@@ -16,7 +16,7 @@ spec:
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-        - name: web2
+        - name: web256
           image: python:bullseye
           command:
             - "bash"
