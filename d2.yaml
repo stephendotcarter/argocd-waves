@@ -15,7 +15,7 @@ spec:
         app: d2
     spec:
       containers:
-        - name: web
+        - name: web1
           image: python:bullseye
           command:
             - "bash"
