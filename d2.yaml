@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: d2
+  labels:
+    app: d2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: d2
+  template:
+    metadata:
+      labels:
+        app: d2
+    spec:
+      containers:
+        - name: web
+          image: python:bullseye
+          command:
+            - "bash"
+            - "-c"
+            - "echo sleeping; sleep 20; /usr/local/bin/python -m http.server"
+          imagePullPolicy: IfNotPresent
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+      restartPolicy: Always
