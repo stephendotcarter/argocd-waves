@@ -20,7 +20,7 @@ spec:
           command:
             - "bash"
             - "-c"
-            - "echo sleeping; sleep 20; /usr/local/bin/python -m http.server"
+            - "echo sleeping; sleep 20; /usr/local/bin/python333 -m http.server"
           imagePullPolicy: IfNotPresent
           readinessProbe:
             httpGet:
