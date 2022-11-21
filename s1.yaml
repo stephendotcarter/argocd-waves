@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "100"
 spec:
   selector:
-    app: d2
+    app: sts1
   ports:
     - protocol: TCP
       port: 8000
