@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: sts1
+  name: sts3
 spec:
   selector:
     matchLabels:
-      app: sts1
+      app: sts3
   replicas: 3 # by default is 1
-  serviceName: sts1
+  serviceName: sts3
   podManagementPolicy: Parallel
   template:
     metadata:
       labels:
-        app: sts1
+        app: sts3
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-        - name: web2
+        - name: web256
           image: python:bullseye
           command:
             - "bash"
